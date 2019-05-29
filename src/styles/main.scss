@@ -1,0 +1,106 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+h1, h2, h3, h4, h5 p, span{
+  padding: 0;
+  margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+
+
+// Global FlexWrapper
+.flexWrapper{
+  display: flex;
+  .menu{
+    width: 260px;
+    background: #F3F3F3;
+    height: 100vh;
+    position: fixed;
+    .menuHeader{
+      padding: 20px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #D7D9E0;
+      .title{
+        color: #394166;
+        font-size: 12px;
+        font-weight: 800;
+        line-height: 15px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      .upload{
+        font-size: 13px;
+        line-height: 13px;
+        color: #9CA0B2;
+        i{
+          margin-left: 6px;
+        }
+      }
+    }
+    .documents{
+      padding: 12px 12px;
+      .elements{
+        padding: 20px 10px;
+        cursor: pointer;
+        a {
+          text-decoration: none;
+        }
+        h3{
+          font-size: 14px;
+          line-height: 17px;
+          color: #394166;
+          padding-bottom: 10px;
+        }
+        span{
+          font-size: 12px;
+          line-height: 14px;
+          color: #394166;
+        }
+      }
+      .active{
+        background: #ffffff;
+        border-left: 4px solid #4077E4;
+        border-radius: 2px;
+        box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
+        text-decoration: none;
+      }
+    }
+  }
+  .content{
+    width: 100%;
+    margin-left: 260px;
+    .contentHeader{
+      width: 100%;
+      background: #4077E4;
+      padding: 14px 0 14px 20px;
+      position: fixed;
+      z-index: 9999;
+      h2{
+        font-size: 18px;
+        line-height: 26px;
+        color: #FFFFFF;
+      }
+    }
+    .container{
+      width: 90%;
+      max-width: 90%;
+      margin: 0 auto;
+      border: 1px solid #DCDCDC;
+      box-sizing: border-box;
+      padding: 14px;
+      margin-top: 85px;
+      p{
+        font-size: 15px;
+        line-height: 24px;
+        color: #394166;
+      }
+      img{
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
