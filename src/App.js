@@ -12,7 +12,6 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      list: [],
       numPages: null,
       pageNumber: 1,
       links: [],
@@ -27,11 +26,12 @@ class App extends Component {
   // select file and convert it into base64
   selectFile = (e) => {
     let mimeType = "";
-    let name = e.target.files[0].name;
+    let name = "";
     if (e.target.files.length > 0) {
       fileReader = new FileReader();
       fileReader.readAsDataURL(e.target.files[0]);
       mimeType = e.target.files[0].type
+      name = e.target.files[0].name;
       fileReader.onload = () => {
         base64 = fileReader.result;
         let links = this.state.links
